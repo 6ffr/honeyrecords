@@ -3,7 +3,7 @@
 
 body {background-color: aliceblue;}
 
-header {background-color: beige;color: cornflowerblue;font-family: Arial, sans-serif;border: cornflowerblue solid medium;}
+header {background-color: beige;color: cornflowerblue;font-family: Arial, sans-serif;border: cornflowerblue solid medium;text-align: center;margin-left:3px;}
 
 header h1 {margin-left: 3px;}
 
@@ -14,3 +14,7 @@ nav p {color:beige;border: beige solid medium;background-color: cornflowerblue;f
 footer:hover {background-color: cornflowerblue;color: whitesmoke;}
 
 img {width: 50%;min-width: 85px;align-items: center;margin-left:3px;}
+
+figure img {width: 10%; min-width: 85px; align-items: center;margin-left: 3px;}
+
+#people {width: 10%;min-width: 60px;align-items: center;margin-left:3px;}
