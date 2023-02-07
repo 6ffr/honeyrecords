@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*CSS Document*/
+
+body {background-color: aliceblue;}
+
+header {background-color: beige;color: cornflowerblue;font-family: Arial, sans-serif;border: cornflowerblue solid medium;}
+
+header h1 {margin-left: 3px;}
+
+nav {background-color: cornflowerblue;}
+
+nav p {color:beige;border: beige solid medium;background-color: cornflowerblue;font-weight: bold;display: inline-block;width: 17%;min-width: 85px;text-align: center;margin-left:3px;}
+
+footer:hover {background-color: cornflowerblue;color: whitesmoke;}
+
+img {width: 50%;min-width: 85px;align-items: center;margin-left:3px;}
