@@ -28,33 +28,41 @@
 
     <section class="history">
         <h2>Our History</h2>
+    
         <a href="https://www.narcity.com/atlanta/this-record-store-in-atlanta-will-take-you-back-in-time"><img src="img/70svinylshop.jpg"></a>
+        <p>
+            Our story goes back as far as the 70s. Back then the company was only a small music store called "Pucket Vinyls and stuff" and was one of the most
+            respected business in the neighborhood. Nowadays we try to still keep the memory alive while still advancing with the times. 
+        </p>
         <p>
             Started from two dreamers who barely knew each other, Honey Records was a vinyl renting shop that flourisbed into the dynamic internet
             you see today. Who are these dreamers? Sam Pucket and Cat Valentine felt burnout from their corporate jobs and came together with their mutual 
             love of music, specifically through a vinyl lovers discord server. After two years of just talk of turning Sam's family Vinyl shop into a website,
             the two finally decided to make their dreams reality and launched HoneyRecords.com in 2019. 
-           
         </p>
-        <p>
-            Our story goes back as far as the 70s. Back then the company was only a small music store called "Pucket Vinyls and stuff" and was one of the most
-            respected business in the neighborhood. Nowadays we try to still keep the memory alive while still advancing with the times.
-        </p>
+        </section>
     </section>
+    <hr>
     <br>
 
     <section class="people">
         <h2>Our People</h2>
-        <h3>Sam Pucket</h3>
-        <a href="https://www.vogue.com/article/jennette-mccurdy-im-glad-my-mom-died-interview"><img src="img/jennettemurcurdy.jpg"></a>
-        <p>Sam Pucket grew up surrounded by music and worked at the family's vinyl shop part time in their adolescenes. graduated with honors from UC San Diego and was set to spend her life in a cushy corporate job. Whole life planned 
-            but Sam wanted more out of life and on her 28th Birthday decided to team up with their friend and now business partner to start working on 
-            transforming the family business into something more modern with the times.
-        </p>
-        <h3>Cat Valentine</h3>
-        <a href="https://www.festicket.com/artists/ariana-grande/"><img src="img/arianagrande.jpg"></a>
-        <p>Cat Valentine was a theater kid and loved to sing. As a freelance programmer and graphic designer, Valetine's flexible schedule gave her opportunities to travel and go to concerts to their favorite artists. However, the freespirit
-           seeked direction in her life and the soul searching led them to Sam Pucket to create Honey Records.</p>
+        <button onClick="pucket()">
+            <h3 id="pucketheader">Sam Pucket</h3>
+            <img id="pucketpic"> 
+            <!---<a href="https://www.vogue.com/article/jennette-mccurdy-im-glad-my-mom-died-interview"><img src="img/jennettemurcurdy.jpg"></a>--->
+            <p id="pucketinfo"><!---Sam Pucket grew up surrounded by music and worked at the family's vinyl shop part time in their adolescenes. graduated with honors from UC San Diego and was set to spend her life in a cushy corporate job. Whole life planned 
+                but Sam wanted more out of life and on her 28th Birthday decided to team up with their friend and now business partner to start working on 
+                transforming the family business into something more modern with the times.
+            ---></p>
+        </button>
+        <button onClick="valentine()">
+            <h3 id="valetineheader">Cat Valentine</h3>
+            <img id="valentinepic">
+            <!---<a href="https://www.festicket.com/artists/ariana-grande/"><img src="img/arianagrande.jpg"></a>--->
+            <p id="valentineinfo"><!---Cat Valentine was a theater kid and loved to sing. As a freelance programmer and graphic designer, Valetine's flexible schedule gave her opportunities to travel and go to concerts to their favorite artists. However, the freespirit
+            seeked direction in her life and the soul searching led them to Sam Pucket to create Honey Records.---></p>
+        </button>
     </section>
 
 
@@ -66,5 +74,19 @@
     <p>Copyright © 2023 by Vy Nguyen</p>
     </footer>
 </main>
+
+    <script>
+        function pucket(){
+            document.getElementById("pucketheader").innerText="Sam Pucket";
+            document.getElementById("pucketpic").setAttribute("src","img/jennettemurcurdy.jpg");
+            document.getElementById("pucketinfo").innerText="Sam Pucket grew up surrounded by music and worked at the family's vinyl shop part time in their adolescenes. Later on, she graduated with honors from UC San Diego and was set to spend her life in a cushy corporate job. Whole life planned but Sam wanted more out of life and on her 28th Birthday decided to team up with their friend and now business partner to start working on transforming the family business into something more modern with the times."
+        }
+        function valentine(){
+            document.getElementById("valetineheader").innerText="Cat Valentine";
+            document.getElementById("valentinepic").setAttribute("src","img/arianagrande.jpg");
+            document.getElementById("valentineinfo").innerText="Cat Valentine was a theater kid and loved to sing. As a freelance programmer and graphic designer, Valetine's flexible schedule gave her opportunities to travel and go to concerts to their favorite artists. However, the freespirit seeked direction in her life and the soul searching led them to Sam Pucket to create Honey Records."
+        }
+    </script>
+
 </body>
 </html>
