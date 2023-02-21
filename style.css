@@ -1,20 +1,103 @@
 @charset "utf-8";
 /*CSS Document*/
 
-body {background-color: aliceblue;}
+body {
+    background-color: aliceblue;
+}
 
-header {background-color: beige;color: cornflowerblue;font-family: Arial, sans-serif;border: cornflowerblue solid medium;text-align: center;margin-left:3px;}
+header {
+    background-color: beige;
+    color: cornflowerblue;
+    font-family: Arial, sans-serif;
+    border: cornflowerblue solid medium;
+    text-align: center;
+}
 
-header h1 {margin-left: 3px;}
+nav {
+    background-color: cornflowerblue;
+}
 
-nav {background-color: cornflowerblue;}
+nav p {
+    color:beige;
+    border: beige solid medium;
+    background-color: cornflowerblue;
+    font-weight: bold;
+    display: inline-block;
+    width: 17%;
+    min-width: 85px;
+    text-align: center;
+}
 
-nav p {color:beige;border: beige solid medium;background-color: cornflowerblue;font-weight: bold;display: inline-block;width: 17%;min-width: 85px;text-align: center;margin-left:3px;}
+footer:hover {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
 
-footer:hover {background-color: cornflowerblue;color: whitesmoke;}
+img {
+    width: 50%;
+    min-width: 85px;
+}
 
-img {width: 50%;min-width: 85px;align-items: center;margin-left:3px;}
+figure img {
+    width: 10%; 
+    min-width: 85px; 
+    align-items: center;
+}
 
-figure img {width: 10%; min-width: 85px; align-items: center;margin-left: 3px;}
+.people {
+    width: 40%;
+    min-width: 40px;
+    align-items: center;
+}
 
-#people {width: 10%;min-width: 60px;align-items: center;margin-left:3px;}
+#pucketheader, #valentineheader, #pucketinfo, #valentineinfo {
+    font-size: 14px;
+    text-align: left;
+}
+
+#pucketpic, #valentinepic {
+    float:right;
+    margin-right:10px;
+    margin-bottom: 10px; 
+    margin-left: 10px;
+}
+
+ul {
+    list-style-image: url("img/music_icon.png");
+}
+
+table {
+    font-family:Arial, Verdana, Helvetica, sans-serif;
+    border: solid thin cornflowerblue;
+    border-collapse: collapse;
+    border-width: 4px;
+}
+
+td {
+    text-align: center;
+    border: solid thin cornflowerblue;
+    border-collapse: collapse;
+    border-width: 2px;
+    background-color: beige;
+    color: cornflowerblue;
+}
+
+th {
+    border-collapse: collapse;
+    border-width: 2px;
+    background-color: cornflowerblue;
+    color: beige;
+    min-width: 10%;
+}
+
+td, th {
+    padding: 5px 10px;
+}
+
+footer {
+    font-size: 0.7500em;
+    font-style: italic;
+    text-align: center;
+    
+}
+  
