@@ -1,26 +1,33 @@
 @charset "utf-8";
 /*CSS Document*/
 
+/* defined custom styles */
+:root {
+    --mainbackground-color: aliceblue;
+    --main-lightcolor: beige;
+    --main-darkcolor: cornflowerblue;
+}
+
 body {
-    background-color: aliceblue;
+    background-color: var(--mainbackground-color);
 }
 
 header {
-    background-color: beige;
-    color: cornflowerblue;
+    background-color: var(--main-lightcolor);
+    color: var(--main-darkcolor);
     font-family: Arial, sans-serif;
-    border: cornflowerblue solid medium;
+    border: var(--main-darkcolor) solid medium;
     text-align: center;
 }
 
 nav {
-    background-color: cornflowerblue;
+    background-color: var(--main-darkcolor);
 }
 
 nav p {
-    color:beige;
-    border: beige solid medium;
-    background-color: cornflowerblue;
+    color:var(--main-lightcolor);
+    border:var(--main-lightcolor) solid medium;
+    background-color: var(--main-darkcolor);
     font-weight: bold;
     display: inline-block;
     width: 17%;
@@ -29,8 +36,8 @@ nav p {
 }
 
 footer:hover {
-    background-color: cornflowerblue;
-    color: whitesmoke;
+    background-color: var(--main-darkcolor);
+    color: var(--main-lightcolor);
 }
 
 img {
@@ -68,25 +75,25 @@ ul {
 
 table {
     font-family:Arial, Verdana, Helvetica, sans-serif;
-    border: solid thin cornflowerblue;
+    border: solid thin var(--main-darkcolor);
     border-collapse: collapse;
     border-width: 4px;
 }
 
 td {
     text-align: center;
-    border: solid thin cornflowerblue;
+    border: solid thin var(--main-darkcolor);
     border-collapse: collapse;
     border-width: 2px;
-    background-color: beige;
-    color: cornflowerblue;
+    background-color: var(--main-lightcolor);
+    color: var(--main-darkcolor);
 }
 
 th {
     border-collapse: collapse;
     border-width: 2px;
-    background-color: cornflowerblue;
-    color: beige;
+    background-color: var(--main-darkcolor);
+    color: var(--main-lightcolor);
     min-width: 10%;
 }
 
