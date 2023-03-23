@@ -57,10 +57,6 @@ figure img {
     align-items: center;
 }
 
-#pucketheader, #valentineheader, #pucketinfo, #valentineinfo {
-    font-size: 14px;
-    text-align: left;
-}
 
 #pucketpic, #valentinepic {
     float:right;
@@ -68,6 +64,7 @@ figure img {
     margin-bottom: 10px; 
     margin-left: 10px;
 }
+ 
 
 ul {
     list-style-image: url("img/music_icon.png");
@@ -106,5 +103,24 @@ footer {
     font-style: italic;
     text-align: center;
     
+}
+
+fieldset {
+    border: solid var(--main-darkcolor);
+    padding: 5px 10px;
+    background-color: var(--main-lightcolor);
+    width: 450px;
+}
+
+fieldset label {
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+    color: var(--main-darkcolor);
+}
+
+legend {
+    color: var(--main-darkcolor);
+    font-style: italic;
 }
   
