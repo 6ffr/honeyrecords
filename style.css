@@ -4,11 +4,12 @@
 /* defined custom styles */
 :root {
     --mainbackground-color: aliceblue;
-    --main-lightcolor: beige;
+    --main-lightcolor: lavenderblush;
     --main-darkcolor: cornflowerblue;
 }
 
 body {
+    color: midnightblue;
     background-color: var(--mainbackground-color);
 }
 
@@ -105,22 +106,3 @@ footer {
     
 }
 
-fieldset {
-    border: solid var(--main-darkcolor);
-    padding: 5px 10px;
-    background-color: var(--main-lightcolor);
-    width: 450px;
-}
-
-fieldset label {
-    display: inline-block;
-    width: 120px;
-    text-align: left;
-    color: var(--main-darkcolor);
-}
-
-legend {
-    color: var(--main-darkcolor);
-    font-style: italic;
-}
-  

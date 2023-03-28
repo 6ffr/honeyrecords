@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey Records join</title>
+
+    <link href="../style.css" rel="stylesheet">
+
+    <style>
+        main {
+            margin: 40px;
+            color: var(--mainbackground-color);
+            border: solid medium var(--main-darkcolor);
+            background-color: var(--main-darkcolor);
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            width: 220px;
+            text-indent: 0.5em;
+            color: var(--mainbackground-color);
+        }
+
+        fieldset {
+            border: solid var(--main-darkcolor);
+            background-color: var(--main-lightcolor);
+        }
+
+        fieldset label {
+            display: inline-block;
+            color: var(--main-darkcolor);
+        }
+
+        legend {
+            background-color: var(--mainbackground-color);
+            color: black;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        textarea {
+            resize: vertical;
+            color: var(--main-darkcolor);
+            background-color: var(--main-lightcolor);
+            width: 90%;
+            margin-left: 5px;
+        }
+
+        button {
+            background-color: var(--mainbackground-color);
+            color: var(--main-darkcolor);
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+			width: 100px;
+			height: 20px;
+            font-size: 18px;
+        }
+
+        input {
+            margin-left: 5px;
+            margin-right: 5px
+        }
+
+        input[name="pinfo"] {
+            width: 80%;
+            display: inline-block;
+        }
+
+        input[name="agegroup"], input[name="esubs"] {
+            margin-left: 50px;
+        }
+
+        .checkboxes, label[for="bio"] {
+            margin-left: 20px;
+            background-color: var(--mainbackground-color);
+            color: var(--main-darkcolor);
+            width: 150px;
+        }
+
+        #bio {
+            font-style: italic;
+        }
+
+    </style>
+
+</head>
+
+    <body>        
+    <header><!--added header for updated step 3-->
+        <figure>
+            <a href="https://www.wix.com/logo/maker"><img src="../img/logo.jpg" alt="hexagon-music-icon" width="150" height="150" title="singing bee"></a>
+            <figcaption>Honey Records Logo by Vy Nguyen</figcaption>
+        </figure>
+        <h1>Honey Records</h1>
+        <nav>
+            <p><a href="../index.html">Home</a></p>
+            <p><a href="about.html">About</a></p>
+            <p><a href="data.html">Data</a></p>
+            <p><a href="join.html">join</a></p>
+            <p><a href="">#</a></p>
+            <p><a href="">#</a></p>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <form>
+            <h2>Join our mailing list</h2>
+            <fieldset>
+                <legend>Personal information</legend>
+                <label for="name">Name: &nbsp;</label><input type="text" name="pinfo" id="name" placeholder="Enter first and last name...."> 
+                <br><br>
+                <label for="address">Address: &nbsp;</label><input type="text" name="pinfo" id="address"> 
+                <br><br>
+                <label for="email">Email: &nbsp;</label><input type="text" name="pinfo" id="email" required> 
+                <br><br>
+                <label for="phone">Phone #: &nbsp;</label><input type="text" name="pinfo" id="phone" placeholder="Enter phone number..."> 
+            </fieldset>
+            <br>
+
+            <p class="checkboxes">Email subscriptions: </p>
+            <label><input type="checkbox" name="esubs">News and deals</label>
+            <label><input type="checkbox" name="esubs">Blog updates</label>
+            <label><input type="checkbox" name="esubs">Recommendations</label>
+            <br>
+            <br>
+
+            <fieldset>
+            <legend>Select your age group: </legend>
+                <label><input type="radio" name="agegroup">18 or under</label>
+                <label><input type="radio" name="agegroup">19-22</label>
+                <label><input type="radio" name="agegroup">23-28</label>
+                <label><input type="radio" name="agegroup">29-35</label>
+                <label><input type="radio" name="agegroup">36-45</label>
+                <label><input type="radio" name="agegroup">46 or older</label>
+            </fieldset>
+            <br>
+
+            <label for="bio">Tell us about yourself: </label><br>
+			<textarea name="bio" id="bio">Enter brief statement here...</textarea><br>
+            <br>
+            <br>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>Copyright &copy; 2023 by Vy Nguyen</p>
+    </footer>
+
+    </body>
+</html>
