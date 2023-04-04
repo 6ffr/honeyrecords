@@ -21,16 +21,14 @@ header {
     text-align: center;
 }
 
-nav {
-    background-color: var(--main-darkcolor);
-}
-
 nav p {
     color:var(--main-lightcolor);
-    border:var(--main-lightcolor) solid medium;
-    background-color: var(--main-darkcolor);
+    border:var(--main-darkcolor) solid medium;
+    background-color: var(--mainbackground-color);
     font-weight: bold;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    gap: 1em;
     width: 17%;
     min-width: 85px;
     text-align: center;
