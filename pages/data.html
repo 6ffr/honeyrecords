@@ -49,14 +49,16 @@
                 <figcaption>Honey Records Logo by Vy Nguyen</figcaption>
             </figure>
             <h1>Honey Records</h1>
-            <nav>
-                <p><a href="../index.html">Home</a></p>
-                <p><a href="about.html">About</a></p>
-                <p><a href="data.html">Data</a></p>
-                <p><a href="join.html">join</a></p>
-                <p><a href="">#</a></p>
-                <p><a href="">#</a></p>
-            </nav>
+            <h3 class="nav-container">
+                <nav>
+                    <p><a href="../index.html">Home</a></p>
+                    <p><a href="about.html">About</a></p>
+                    <p><a href="data.html">Data</a></p>
+                    <p><a href="join.html">join</a></p>
+                    <p><a href="">#</a></p>
+                    <p><a href="">#</a></p>
+                </nav>
+            </h3>
         </header>
 
         <main>
@@ -68,7 +70,7 @@
                 <li>004: Thee Sacred Souls - Trade Of Hearts</li>
             </ul>
 
-            <table>
+            <table id="mytable">
                 <tr>
                     <th>Album</th>
                     <th>Artist</th>
@@ -111,6 +113,15 @@
             <br>
             <br>
             <fieldset>
+                <legend>Find, add, and remove</legend>
+                <button onClick="findinput()">Find an album</button>
+                <button onClick="addinput()">Add album</button>
+                <button onClick="removeinput()">Remove an album</button>
+
+            </fieldset>
+            <br>
+
+            <fieldset>
                 <legend>Search</legend>
                 <label for="yearinput">Find albums over this year: </label>
                 <input type="number" id="yearinput" placeholder="Enter year...">
@@ -131,6 +142,7 @@
     </body>
 
     <script>
+        //loop function for finding album over x amount of years
         document.getElementById("findbtn").addEventListener("click", findalbum);
     
         function findalbum(){
@@ -166,6 +178,46 @@
                 noresults.style.color = "red";
                 outputdiv.appendChild(noresults);
             }
+        }
+
+        //functions for find, add, remove button
+        const albums = ['ABBA- Gold', 'Boney M. - Ultimate collection', 'Michael Jackson - Xscape', 'Thee Sacred Souls - Trade Of Hearts'];
+
+        function findinput(){
+            let input;
+            do {
+                input = prompt("Enter album numer (1-4): ");
+            } while(!isValidInput(input));
+
+            const index = parseInt(input) - 1;
+            const album = albums[index];
+            alert('That number corresponds with the album: ' + album);
+        }
+
+        function addinput(){
+            const album = prompt("Enter title of album to be added: ");
+            albums.push(album);
+            alert("The album: '" + album + "' has been added to list.");
+        }
+
+        function removeinput(){
+            let input;
+            do {
+                input = prompt('Enter album number to be removed (1-4): ');
+            } while(!isValidInput(input));
+
+            const index = parseInt(input) - 1;
+            const removedinput = albums.splice(index, 1);
+            alert(removedinput[0] + " is removed from list.");
+        }
+
+        function isValidInput(input){
+            const num = parseInt(input);
+            const isValid = !isNaN(num) && num >= 1 && num <=albums.length;
+            if (!isValid) {
+                alert("Invalid. Enter a number between 1-"+albums.length+".");
+            }
+            return isValid;
         }
     </script>
 </html>

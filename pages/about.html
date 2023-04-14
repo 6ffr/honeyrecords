@@ -7,32 +7,6 @@
 
 <link href="../style.css" rel="stylesheet">
 
-
-<script>
-    /*hoover mouse over to expand content, hoover out to collaspe*/
-    function OnPucket(){
-        document.getElementById("pucketheader").innerText="Sam Pucket";
-        document.getElementById("pucketpic").setAttribute("src","../img/jennettemurcurdy.jpg");
-        document.getElementById("pucketinfo").innerText="Sam Pucket grew up surrounded by music and worked at the family's vinyl shop part time in their adolescenes. Later on, she graduated with honors from UC San Diego and was set to spend her life in a cushy corporate job. Whole life planned but Sam wanted more out of life and on her 28th Birthday decided to team up with their friend and now business partner to start working on transforming the family business into something more modern with the times.";
-    }
-    function OutPucket(){
-        document.getElementById("pucketheader").innerText="Sam Pucket";
-        document.getElementById("pucketpic").setAttribute("src","../img/jennettemurcurdy.jpg");
-        document.getElementById("pucketinfo").innerText="Hoover for more...";
-    }
-
-    function OnValentine(){
-        document.getElementById("valentineheader").innerText="Cat Valentine";
-        document.getElementById("valentinepic").setAttribute("src","../img/arianagrande.jpg");
-        document.getElementById("valentineinfo").innerText="Cat Valentine was a theater kid and loved to sing. As a freelance programmer and graphic designer, Valetine's flexible schedule gave her opportunities to travel and go to concerts to their favorite artists. However, the freespirit seeked direction in her life and the soul searching led them to Sam Pucket to create Honey Records.";
-    }
-    function OutValentine(){
-        document.getElementById("valentineheader").innerText="Cat Valentine";
-        document.getElementById("valentinepic").setAttribute("src","../img/arianagrande.jpg");
-        document.getElementById("valentineinfo").innerText="Hoover for more...";
-    }
-</script>
-
 <style>
       section img {
         border-radius: 10px;
@@ -53,6 +27,10 @@
         gap: 25px;
       }
 
+      div {
+        position: relative;
+      }
+
       .grid-item1 {
         grid-column: span 2;
         grid-row: span 2;
@@ -64,13 +42,22 @@
       }
 
       .hist-container figcaption {
-        font-size: 12px;
-        font-weight: 600;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        font-size: 13px;
         font-style: italic;
+        color: transparent;
         position: absolute;
-        background-color: var(--main-lightcolor);
 
       } 
+
+      /* hoover over bottom center of image to see caption */
+      .hist-container figcaption:hover {
+        text-align: center;
+        background-color: var(--main-darkcolor);
+        color: var(--mainbackground-color);
+      }
 </style>
 
 </head>
@@ -86,20 +73,23 @@
             <figcaption>Honey Records Logo by Vy Nguyen</figcaption>
         </figure>
         <h1>Honey Records</h1>
-        <nav>
-            <p><a href="../index.html">Home</a></p>
-            <p><a href="about.html">About</a></p>
-            <p><a href="data.html">Data</a></p>
-            <p><a href="join.html">join</a></p>
-            <p><a href="">#</a></p>
-            <p><a href="">#</a></p>
-        </nav>
+        <h3 class="nav-container">
+            <nav>
+                <p><a href="../index.html">Home</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="data.html">Data</a></p>
+                <p><a href="join.html">join</a></p>
+                <p><a href="">#</a></p>
+                <p><a href="">#</a></p>
+            </nav>
+        </h3>
     </header>
     <br>
 
     <section class="history">
         <h2>Our History</h2>
-
+        
+        <!-- hoover over bottom center of image to see caption -->
         <section class="hist-container">
             <div class="grid-item1"><img src="../img/pinkpicrecord.jpg" alt="modern-record-wall"><figcaption>Store renovation and remodel into Honey Records finished in March, 2023.</figcaption></div>
             <div class="grid-item2"><img src="../img/70svinylshop.jpg" alt="record-shop-in-70s"><figcaption>Cashier and regular, 1973.</figcaption></div>
@@ -128,22 +118,15 @@
 
     <section class="people">
         <h2>Our People</h2>
-        <button onMouseOver="OnPucket()" onMouseOut="OutPucket()">
-            <h3 id="pucketheader">Sam Pucket</h3>
-            <img id="pucketpic"> 
-            <!---<a href="https://www.vogue.com/article/jennette-mccurdy-im-glad-my-mom-died-interview"><img src="img/jennettemurcurdy.jpg"></a>-->
-            <p id="pucketinfo"><!---Sam Pucket grew up surrounded by music and worked at the family's vinyl shop part time in their adolescenes. graduated with honors from UC San Diego and was set to spend her life in a cushy corporate job. Whole life planned 
-                but Sam wanted more out of life and on her 28th Birthday decided to team up with their friend and now business partner to start working on 
-                transforming the family business into something more modern with the times.
-            ---></p>
-        </button>
-        <button onMouseOver="OnValentine()" onMouseOut="OutValentine()">
-            <h3 id="valentineheader">Cat Valentine</h3>
-            <img id="valentinepic">
-            <!---<a href="https://www.festicket.com/artists/ariana-grande/"><img src="img/arianagrande.jpg"></a>--->
-            <p id="valentineinfo"><!---Cat Valentine was a theater kid and loved to sing. As a freelance programmer and graphic designer, Valetine's flexible schedule gave her opportunities to travel and go to concerts to their favorite artists. However, the freespirit
-            seeked direction in her life and the soul searching led them to Sam Pucket to create Honey Records.---></p>
-        </button>
+        <button id="p1-btn">Sam Pucket</button>
+        <h3 id="p1-header"></h3>
+        <img id="p1-pic">
+        <p id="p1-info"></p>
+
+        <button id="p2-btn">Cat Valentine</button>
+            <h3 id="p2-header"></h3>
+            <img id="p2-pic">
+            <p id="p2-info"></p>
     </section>
 
 
@@ -157,4 +140,83 @@
 </main>
 
 </body>
+<script>
+    //hoover over button to show content 
+    //person 1
+    function showContent1(name, picSrc, bio) {
+        const header1 = document.getElementById("p1-header");
+        const pic1 = document.getElementById("p1-pic");
+        const info1 = document.getElementById("p1-info");
+
+        header1.innerText = name;
+        pic1.setAttribute("scr", picSrc);
+        info1.innerText = bio;
+    }
+
+    function hideContent1() {
+        const header1 = document.getElementById("p1-header");
+        const pic1 = document.getElementById("p1-pic");
+        const info1 = document.getElementById("p1-info");
+
+        header1.innerText = "";
+        pic1.setAttribute("src", "");
+        info1.innerText = " "
+    }
+
+    //person 2
+    function showContent2(name, picSrc, bio) {
+        const header2 = document.getElementById("p2-header");
+        const pic2 = document.getElementById("p2-pic");
+        const info2 = document.getElementById("p2-info");
+
+        header2.innerText = name;
+        pic2.setAttribute("scr", picSrc);
+        info2.innerText = bio;
+    }
+
+    function hideContent2() {
+        const header2 = document.getElementById("p2-header");
+        const pic2 = document.getElementById("p2-pic");
+        const info2 = document.getElementById("p2-info");
+
+        header2.innerText = "";
+        pic2.setAttribute("src", "");
+        info2.innerText = " "
+    }
+
+    const p1Btn = document.getElementById("p1-btn");
+    const p2Btn = document.getElementById("p2-btn");
+
+    p1Btn.addEventListener("mouseover", function(){
+        showContent1("CEO", "../img/jennettemurcurdy.jpg", "Sam Pucket grew up surrounded by music and worked at the family's vinyl shop part time in their adolescenes. Later on, she graduated with honors from UC San Diego and was set to spend her life in a cushy corporate job. Whole life planned but Sam wanted more out of life and on her 28th Birthday decided to team up with their friend and now business partner to start working on transforming the family business into something more modern with the times.")
+    });
+
+    p1Btn.addEventListener("mouseout", hideContent1);
+
+    p2Btn.addEventListener("mouseover", function() {
+        showContent2("CFO", "../img/arianagrande.jpg", "Cat Valentine was a theater kid and loved to sing. As a freelance programmer and graphic designer, Valetine's flexible schedule gave her opportunities to travel and go to concerts to their favorite artists. However, the freespirit seeked direction in her life and the soul searching led them to Sam Pucket to create Honey Records.");
+    });
+
+    p2Btn.addEventListener("mouseout", hideContent2);
+
+//console people list
+
+window.addEventListener('load', function() {
+  const title = document.querySelectorAll(".people h2")
+  const headings = document.querySelectorAll('.people button');
+
+    // loop through the headings and extract the names
+    for (let i = 0; i < title.length; i++) {
+    const name = title[i].innerText;
+    console.log(name);
+  }
+    for (let i = 0; i < headings.length; i++) {
+    const name = headings[i].innerText;
+    console.log(name);
+  }
+
+});
+
+
+</script>
 </html>
