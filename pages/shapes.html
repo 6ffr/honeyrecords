@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey Records Shapes</title>
+
+<link href="../style.css" rel="stylesheet">
+
+<style>
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px; 
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    section {
+        margin-top: 10px;
+        background-color: var(--main-darkcolor);
+    }
+
+    section div {
+        width: 50px;
+        height: 50px;
+        color: var(--main-lightcolor);
+        text-align: center; 
+        line-height: 50px
+    }
+
+    #div2 {
+        transform: translate(130px, 100%);
+    }
+
+    #div3 {
+        transform-origin: bottom left;
+        transform: rotate(60deg);
+    }
+
+    #div4 {
+        transform: scale(2);
+    }
+
+    #div5 {
+        transform: skew(-15deg, -15deg);
+    }
+
+    li::marker {
+
+        color: red;
+    }
+
+</style>
+</head>
+
+<body>
+    <header><!--added header for updated step 3-->
+        <figure>
+            <a href="https://www.wix.com/logo/maker"><img src="../img/logo.jpg" alt="hexagon-music-icon" width="150" height="150" title="singing bee"></a>
+            <figcaption>Honey Records Logo by Vy Nguyen</figcaption>
+        </figure>
+        <h1>Honey Records</h1>
+        <h3 class="nav-container">
+            <nav>
+                <p><a href="../index.html">Home</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="data.html">Data</a></p>
+                <p><a href="join.html">join</a></p>
+                <p><a href="shapes.html">Shapes</a></p>
+                <p><a href="">#</a></p>
+            </nav>
+        </h3>
+    </header>
+
+    <main>
+        <section><div id="div1">1</div></section>
+        <section><div id="div2">2</div></section>
+        <section><div id="div3">3</div></section>
+        <section><div id="div4">4</div></section>
+        <section><div id="div5">5</div></section>
+    </main>
+
+    <h3>Transformations Used:</h3>
+    <ol>
+        <li>None</li>
+        <li>Translate</li>
+        <li>Rotate</li>
+        <li>Scale</li>
+        <li>Skew</li>
+    </ol>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>Copyright &copy; 2023 by Vy Nguyen</p>
+    </footer>
+</body>
+
+</html>

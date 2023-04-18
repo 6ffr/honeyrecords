@@ -79,7 +79,7 @@
                 <p><a href="about.html">About</a></p>
                 <p><a href="data.html">Data</a></p>
                 <p><a href="join.html">join</a></p>
-                <p><a href="">#</a></p>
+                <p><a href="shapes.html">Shapes</a></p>
                 <p><a href="">#</a></p>
             </nav>
         </h3>
@@ -120,7 +120,7 @@
         <h2>Our People</h2>
         <button id="p1-btn">Sam Pucket</button>
         <h3 id="p1-header"></h3>
-        <img id="p1-pic">
+        <img id="p1-pic" >
         <p id="p1-info"></p>
 
         <button id="p2-btn">Cat Valentine</button>
@@ -141,7 +141,7 @@
 
 </body>
 <script>
-    //hoover over button to show content 
+    //click button to show content, double click to close
     //person 1
     function showContent1(name, picSrc, bio) {
         const header1 = document.getElementById("p1-header");
@@ -170,7 +170,7 @@
         const info2 = document.getElementById("p2-info");
 
         header2.innerText = name;
-        pic2.setAttribute("scr", picSrc);
+        pic2.setAttribute("src", picSrc);
         info2.innerText = bio;
     }
 
@@ -187,17 +187,17 @@
     const p1Btn = document.getElementById("p1-btn");
     const p2Btn = document.getElementById("p2-btn");
 
-    p1Btn.addEventListener("mouseover", function(){
+    //p1
+    p1Btn.addEventListener("click", function(){
         showContent1("CEO", "../img/jennettemurcurdy.jpg", "Sam Pucket grew up surrounded by music and worked at the family's vinyl shop part time in their adolescenes. Later on, she graduated with honors from UC San Diego and was set to spend her life in a cushy corporate job. Whole life planned but Sam wanted more out of life and on her 28th Birthday decided to team up with their friend and now business partner to start working on transforming the family business into something more modern with the times.")
     });
+    p1Btn.addEventListener("dblclick", hideContent1);
 
-    p1Btn.addEventListener("mouseout", hideContent1);
-
-    p2Btn.addEventListener("mouseover", function() {
+    //p2
+    p2Btn.addEventListener("click", function() {
         showContent2("CFO", "../img/arianagrande.jpg", "Cat Valentine was a theater kid and loved to sing. As a freelance programmer and graphic designer, Valetine's flexible schedule gave her opportunities to travel and go to concerts to their favorite artists. However, the freespirit seeked direction in her life and the soul searching led them to Sam Pucket to create Honey Records.");
     });
-
-    p2Btn.addEventListener("mouseout", hideContent2);
+    p2Btn.addEventListener("dblclick", hideContent2);
 
 //console people list
 
@@ -205,7 +205,7 @@ window.addEventListener('load', function() {
   const title = document.querySelectorAll(".people h2")
   const headings = document.querySelectorAll('.people button');
 
-    // loop through the headings and extract the names
+    //loop through headings and extract the names
     for (let i = 0; i < title.length; i++) {
     const name = title[i].innerText;
     console.log(name);
