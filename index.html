@@ -6,13 +6,75 @@
     <title>Honey Records homepage</title>
 
 <link href="style.css" rel="stylesheet">
+
+<style>
+    /* Added to style page instead
+     @media screen and (max-width: 600px){
+        header img {  
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;}
+
+        nav {
+            display: grid;
+            align-items: center;
+            grid-template-columns: minmax(100px,1fr);
+            grid-auto-rows: 10px;
+            grid-gap: 1em;
+            width: 90%;
+            min-width: 85px;
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    } */
+
+    article img {
+        height: 100px;
+        width: 200px;
+        float: left;
+    }
+
+        @media screen and (min-width: 800px) {
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 50px;
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+    }
+
+    article p::first-line {
+        font-size: 120%;
+        font-variant: small-caps;
+    }
+
+    article p::first-letter {
+        font-weight: bold;
+        color: red;
+    }
+
+    @media screen and (max-width: 500px) {
+        article img {
+            float: right;
+        }
+    }
+    
+</style>
 </head>
 
     <body>        
     <header><!--added header for updated step 3-->
         <figure>
             <a href="https://www.wix.com/logo/maker"><img src="img/logo.jpg" alt="hexagon-music-icon" width="150" height="150" title="singing bee"></a>
-            <figcaption>Honey Records Logo by Vy Nguyen</figcaption>
+            <figcaption>Honey Records Logo</figcaption>
         </figure>
         <h1>Honey Records</h1>
         <h3 class="nav-container">
@@ -20,29 +82,38 @@
                 <p><a href="index.html">Home</a></p>
                 <p><a href="pages/about.html">About</a></p>
                 <p><a href="pages/data.html">Data</a></p>
-                <p><a href="pages/join.html">join</a></p>
+                <p><a href="pages/join.html">Join</a></p>
                 <p><a href="pages/shapes.html">Shapes</a></p>
-                <p><a href="">#</a></p>
+                <p><a href="https://andypants.net/"target="_blank"rel="noopener noreferrer">Extra Fun</a></p>
             </nav>
         </h3>
     </header>
 
-    <h1>Take a look at our products and find yourself something sweet :)</h1>
+    <h1>Take a look at our products and find yourself something sweet</h1>
     <br>
+
     <main>
-        <article>
+        <article id="article1">
             <h2>Music, Fun, and Community</h2>
-            <h3>So what are we?</h3>
+            <img src="img/vinylstockart.jpg" alt="vinylstockart">
                 <p>Honey Records is an affiliate website that offers products and resources for a specific niche. Our digital outlet offers a variaty of musical entertainment 
                 products as well as fun merch for those specific artists.</p>
-                <P>When you have time, you are also free to visit our real-life store in San Diego, Callifornia. There are no plans currently to expand to other locations.</P>
-            <h3>Support us. Support small businesses</h3>
+                <P>When you have time, you are also free to visit our real-life store in San Diego, Callifornia. There are no plans currently to expand to other locations.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita neque fugit eligendi velit odit in voluptatibus aspernatur culpa officiis nemo. Dolores
+                    accusantium consequatur reiciendis qui cum et nesciunt non deserunt.
+                </P>
+                <button id="swapbtn1">Swap articles</button>
+        </article>
+        <article id="article2">
+            <h2>Our Values</h2>
+            <img src="img/opensign.jpg" alt="girlsign">
                 <p>Honey Records stems from humble beginings with a history spanning back to the 70s.</p>
-                <P>Read more about our story in our about us page.</P>
-
-            
+                <P>Read more about our story in our <a href="pages/about.html">about us</a> page. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore recusandae
+                molestiae quae, reiciendis ducimus ut, esse, modi asperiores ad nobis id. Laboriosam, eligendi assumenda tempora ratione deleniti tenetur distinctio suscipit!</P>
+            <button id="swapbtn2">Swap articles</button>
         </article>
     </main>
+
 
     <br>
     <br>
@@ -52,6 +123,25 @@
         <p>Copyright &copy; 2023 by Vy Nguyen</p>
     </footer>
 
+    <script>
+        const article1 = document.getElementById('article1');
+        const article2 = document.getElementById('article2');
+
+        const swapbtn1 = document.getElementById('swapbtn1');
+        const swapbtn2 = document.getElementById('swapbtn2');
+
+        swapbtn1.addEventListener('click', () => {
+            const temp = article1.innerHTML;
+            article1.innerHTML = article2.innerHTML;
+            article2.innerHTML = temp;
+        });
+
+        swapbtn2.addEventListener('click', () => {
+            const temp = article2.innerHTML;
+            article2.innerHTML = article1.innerHTML;
+            article1.innerHTML = temp;
+        });
+    </script>
     </body>
 </html>
 
